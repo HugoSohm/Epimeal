@@ -1,9 +1,10 @@
-# Epimeal - Trouvez où manger
+<div align="center"><h1>Epimeal - Trouvez où manger</h1>
 
 Epimeal est un projet HUB développé par 3 étudiants à [Epitech Nice](https://www.epitech.eu/fr/)
 
 Contributeurs : [Hugo SOHM](https://github.com/HugoSohm), [Nathan Grimaud](https://github.com/GrimaudNathan), [Ryan Chamayrac](https://github.com/RyanChamayrac)
-<div align="center"><img src="https://github.com/HugoSohm/Epimeal/blob/master/img/epimeal.jpg" alt="Epimeal" /></div>
+
+<img src="https://github.com/HugoSohm/Epimeal/blob/master/img/epimeal.jpg" alt="Epimeal" /></div>
 
 ## Fonctionnalités
 
