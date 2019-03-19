@@ -2,6 +2,8 @@
 
 Epimeal est un projet HUB développé par 3 étudiants à Epitech Nice
 
+<div align="center"><img src="https://github.com/HugoSohm/Epimeal/blob/master/img/epimeal.jpg" alt="Epimeal" /></div>
+
 ## Fonctionnalités
 
 ### Google maps
