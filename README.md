@@ -2,7 +2,7 @@
 
 Epimeal est un projet HUB développé par 3 étudiants à [Epitech Nice](https://www.epitech.eu/fr/)
 
-Contributeurs : [Hugo SOHM](https://github.com/HugoSohm), [Nathan Grimaud](https://github.com/GrimaudNathan), [Ryan Chamayrac](https://github.com/RyanChamayrac)
+[Hugo Sohm](https://github.com/HugoSohm), [Nathan Grimaud](https://github.com/GrimaudNathan), [Ryan Chamayrac](https://github.com/RyanChamayrac)
 
 <img src="https://github.com/HugoSohm/Epimeal/blob/master/img/epimeal.jpg" alt="Epimeal" /></div>
 
