@@ -66,37 +66,6 @@ export class CurrentLocation extends React.Component {
           }
       );
       this.map = new maps.Map(node, mapConfig);
-
-      var infowindow = new google.maps.InfoWindow();
-      var locations = [
-        ["Au Gubernatis", 43.699099, 7.273928, "https://github.com/HugoSohm/Epimeal/blob/master/img/bonta.jpg"],
-        ["BonTà", 43.695990, 7.273516]
-      ];
-      var mapElement = document.getElementById('map');
-      var myLatLng;
-      var marker, i;
-      for (i = 0; i < locations.length; i++) {
-        myLatLng = {lat: locations[i][1], lng: locations[i][2]};
-        marker = new google.maps.Marker({
-          position: myLatLng,
-          map: this.map,
-          icon: "https://github.com/HugoSohm/Epimeal/blob/master/img/marker.jpg"
-        });
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-          return function() {
-            infowindow.setContent('<div id="content">'+
-                '<div id="siteNotice">'+
-                '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">'+
-                locations[i][0]+
-                '</h1>'+
-                '<div id="bodyContent">'+
-                '</div>'+
-                '</div>');
-            infowindow.open(this.map, marker);
-          }
-        })(marker, i));
-      }
       var styles = {
         hide: [
           {
@@ -111,6 +80,31 @@ export class CurrentLocation extends React.Component {
         ]
       };
       this.map.setOptions({styles: styles['hide']});
+
+      var infowindow = new google.maps.InfoWindow();
+      var locations = [
+        ["Au Gubernatis", 43.699099, 7.273928, "8 Rue Gubernatis, 06000 Nice", "/img/guber.jpeg"],
+        ["BonTà", 43.695990, 7.273516, "1 Rue Louis Gassin, 06300 Nice", "/img/bonta.jpg"],
+        ["Pizza Pili", 43.696674, 7.276664, "24 Rue Benoît Bunico, 06300 Nice", "/img/pizza.jpg"]
+      ];
+      var myLatLng;
+      var marker, i;
+      for (i = 0; i < locations.length; i++) {
+        myLatLng = {lat: locations[i][1], lng: locations[i][2]};
+        marker = new google.maps.Marker({
+          position: myLatLng,
+          map: this.map,
+          icon: "/img/marker.png"
+        });
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            var html = '<h4>' + locations[i][0] + '</h4>';
+            html += '<img src="' + locations[i][4] + '" />' + '<div id="bodyContent">' + locations[i][3];
+            infowindow.setContent(html);
+            infowindow.open(this.map, marker);
+          }
+        })(marker, i));
+      }
     }
   }
 
