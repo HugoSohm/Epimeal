@@ -46,26 +46,74 @@ export class CurrentLocation extends React.Component {
     }
   }
 
-  loadMap() {
+  loadMap(listener) {
     if (this.props && this.props.google) {
-      const { google } = this.props;
+      const {google} = this.props;
       const maps = google.maps;
 
       const mapRef = this.refs.map;
 
       const node = ReactDOM.findDOMNode(mapRef);
 
-      let { zoom } = this.props;
-      const { lat, lng } = this.state.currentLocation;
+      let {zoom} = this.props;
+      const {lat, lng} = this.state.currentLocation;
       const center = new maps.LatLng(lat, lng);
       const mapConfig = Object.assign(
-        {},
-        {
-          center: center,
-          zoom: zoom
-        }
+          {},
+          {
+            center: center,
+            zoom: zoom
+          }
       );
       this.map = new maps.Map(node, mapConfig);
+
+      /*var infowindow = new google.maps.InfoWindow({
+        content: "nique zeubi"
+      });
+      var myLatLng = {lat: 43.695806, lng: 7.270094};
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: this.map,
+        title: 'Hello World!'
+      });
+      marker.addListener('click', function() {
+        infowindow.open(this.map, marker);
+      });*/
+      var infowindow = new google.maps.InfoWindow();
+      var locations = [
+        ["Au Gubernatis", 43.699099, 7.273928],
+        ["BonTà", 43.695990, 7.273516]
+      ];
+      var mapElement = document.getElementById('map');
+      var myLatLng;
+      var marker, i;
+      for (i = 0; i < locations.length; i++) {
+        myLatLng = {lat: locations[i][1], lng: locations[i][2]};
+        marker = new google.maps.Marker({
+          position: myLatLng,
+          map: this.map,
+        });
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(this.map, marker);
+          }
+        })(marker, i));
+      }
+      var styles = {
+        hide: [
+          {
+            featureType: 'poi',
+            stylers: [{visibility: 'off'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'labels.icon',
+            stylers: [{visibility: 'off'}]
+          }
+        ]
+      };
+      this.map.setOptions({styles: styles['hide']});
     }
   }
 
