@@ -67,18 +67,6 @@ export class CurrentLocation extends React.Component {
       );
       this.map = new maps.Map(node, mapConfig);
 
-      /*var infowindow = new google.maps.InfoWindow({
-        content: "nique zeubi"
-      });
-      var myLatLng = {lat: 43.695806, lng: 7.270094};
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: this.map,
-        title: 'Hello World!'
-      });
-      marker.addListener('click', function() {
-        infowindow.open(this.map, marker);
-      });*/
       var infowindow = new google.maps.InfoWindow();
       var locations = [
         ["Au Gubernatis", 43.699099, 7.273928, "https://github.com/HugoSohm/Epimeal/blob/master/img/bonta.jpg"],
@@ -92,12 +80,11 @@ export class CurrentLocation extends React.Component {
         marker = new google.maps.Marker({
           position: myLatLng,
           map: this.map,
+          icon: "https://github.com/HugoSohm/Epimeal/blob/master/img/marker.jpg"
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
-            infowindow.setContent('<img src='+
-                'locations[i][0] '+
-                '<div id="content">'+
+            infowindow.setContent('<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
                 '<h1 id="firstHeading" class="firstHeading">'+
@@ -113,7 +100,7 @@ export class CurrentLocation extends React.Component {
       var styles = {
         hide: [
           {
-            featureType: 'poi',
+            featureType: 'poi.business',
             stylers: [{visibility: 'off'}]
           },
           {
