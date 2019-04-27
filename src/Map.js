@@ -81,7 +81,7 @@ export class CurrentLocation extends React.Component {
       });*/
       var infowindow = new google.maps.InfoWindow();
       var locations = [
-        ["Au Gubernatis", 43.699099, 7.273928],
+        ["Au Gubernatis", 43.699099, 7.273928, "https://github.com/HugoSohm/Epimeal/blob/master/img/bonta.jpg"],
         ["BonTà", 43.695990, 7.273516]
       ];
       var mapElement = document.getElementById('map');
@@ -95,7 +95,17 @@ export class CurrentLocation extends React.Component {
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
-            infowindow.setContent(locations[i][0]);
+            infowindow.setContent('<img src='+
+                'locations[i][0] '+
+                '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">'+
+                locations[i][0]+
+                '</h1>'+
+                '<div id="bodyContent">'+
+                '</div>'+
+                '</div>');
             infowindow.open(this.map, marker);
           }
         })(marker, i));
