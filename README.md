@@ -4,7 +4,7 @@ Epimeal est un projet HUB développé par 3 étudiants à [Epitech Nice](https:/
 
 [Hugo Sohm](https://github.com/HugoSohm), [Nathan Grimaud](https://github.com/GrimaudNathan), [Ryan Chamayrac](https://github.com/RyanChamayrac)
 
-<img src="https://github.com/HugoSohm/Epimeal/blob/master/img/epimeal.jpg" alt="Epimeal" /></div>
+<img src="https://github.com/HugoSohm/Epimeal/blob/master/public/img/epimeal.jpg" alt="Epimeal" /></div>
 
 ## Fonctionnalités
 
