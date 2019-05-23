@@ -85,7 +85,9 @@ export class CurrentLocation extends React.Component {
       var locations = [
         ["Au Gubernatis", 43.699099, 7.273928, "8 Rue Gubernatis, 06000 Nice", "/img/guber.jpeg"],
         ["BonTà", 43.695990, 7.273516, "1 Rue Louis Gassin, 06300 Nice", "/img/bonta.jpg"],
-        ["Pizza Pili", 43.696674, 7.276664, "24 Rue Benoît Bunico, 06300 Nice", "/img/pizza.jpg"]
+        ["Pizza Pili", 43.696674, 7.276664, "24 Rue Benoît Bunico, 06300 Nice", "/img/pizza.jpg"],
+        ["Bref. Burger Factory", 43.696073, 7.270141, "2 Rue Desboutin, 06000 Nice", "/img/bref.jpg"],
+        ["Olim", 43.696834, 7.271662, "54 Boulevard Jean Jaurès, 06300 Nice", "/img/olim.jpg"]
       ];
       var myLatLng;
       var marker, i;
