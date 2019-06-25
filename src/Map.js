@@ -67,19 +67,54 @@ export class CurrentLocation extends React.Component {
       );
       this.map = new maps.Map(node, mapConfig);
       var styles = {
-        hide: [
+        epimealstyle: [
           {
-            featureType: 'poi.business',
-            stylers: [{visibility: 'off'}]
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
           },
           {
-            featureType: 'transit',
-            elementType: 'labels.icon',
-            stylers: [{visibility: 'off'}]
+            "featureType": "poi",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.business",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
           }
         ]
       };
-      this.map.setOptions({styles: styles['hide']});
+      this.map.setOptions({styles: styles['epimealstyle']});
 
       var infowindow = new google.maps.InfoWindow();
       var locations = [
@@ -103,8 +138,9 @@ export class CurrentLocation extends React.Component {
         });
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
-            var html = '<h4>' + locations[i][0] + '</h4>';
-            html += '<img src="' + locations[i][4] + '" />' + '<div id="bodyContent">' + locations[i][3];
+            var html = '<b><center>' + locations[i][0] + '</center></b>';
+            html += '<img src="' + locations[i][4] + '" />'
+            html += '<div id="bodyContent">' + locations[i][3];
             infowindow.setContent(html);
             infowindow.open(this.map, marker);
           }
@@ -147,7 +183,7 @@ export class CurrentLocation extends React.Component {
     return (
       <div>
         <div style={style} ref="map">
-          Loading map...
+          Chargement de la carte...
         </div>
         {this.renderChildren()}
       </div>
