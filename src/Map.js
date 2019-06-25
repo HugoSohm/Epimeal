@@ -124,8 +124,9 @@ export class CurrentLocation extends React.Component {
         ["Bref. Burger Factory", 43.696073, 7.270141, "2 Rue Desboutin, 06000 Nice", "/img/bref.jpg"],
         ["Olim", 43.696834, 7.271662, "54 Boulevard Jean Jaurès, 06300 Nice", "/img/olim.jpg"],
         ["Subway", 43.696409, 7.271233, "8 Plassa Carlou Aubert, 06300 Nice", "/img/subway.jpg"],
-        ["Pokawa", 43.697404, 7.265242, "1 Place Grimaldi, 06000 Nice", "/img/powaka.jpg"],
-        ["McDonalds", 43.695162, 7.265964, "1 Prom. des Anglais, 06000 Nice", "/img/mcdo.jpg"]
+        ["Pokawa", 43.697404, 7.265242, "1 Place Grimaldi, 06000 Nice", "/img/pokawa.jpg"],
+        ["McDonalds", 43.695162, 7.265964, "1 Prom. des Anglais, 06000 Nice", "/img/mcdo.jpg"],
+        ["So Green", 43.698222, 7.270116, "11 Place Massena, 06000 Nice", "/img/so-green.jpg"]
       ];
       var myLatLng;
       var marker, i;
@@ -147,6 +148,18 @@ export class CurrentLocation extends React.Component {
         })(marker, i));
       }
     }
+    /*var start = {lat: 43.698222, lng: 7.270116};
+    var end = {lat: 43.699099, lng: 7.273928};
+    var request = {
+      origin: start,
+      destination: end,
+      travelMode: 'DRIVING'
+    };
+    this.directionsService.route(request, function(result, status) {
+      if (status == 'OK') {
+        this.directionsDisplay.setDirections(result);
+      }
+    });*/
   }
 
   recenterMap() {
