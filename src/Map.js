@@ -148,18 +148,6 @@ export class CurrentLocation extends React.Component {
         })(marker, i));
       }
     }
-    /*var start = {lat: 43.698222, lng: 7.270116};
-    var end = {lat: 43.699099, lng: 7.273928};
-    var request = {
-      origin: start,
-      destination: end,
-      travelMode: 'DRIVING'
-    };
-    this.directionsService.route(request, function(result, status) {
-      if (status == 'OK') {
-        this.directionsDisplay.setDirections(result);
-      }
-    });*/
   }
 
   recenterMap() {
