@@ -125,9 +125,9 @@ export class CurrentLocation extends React.Component {
         ["Olim", 43.696834, 7.271662, "54 Boulevard Jean Jaurès, 06300 Nice", "/img/olim.jpg"],
         ["Subway", 43.696409, 7.271233, "8 Plassa Carlou Aubert, 06300 Nice", "/img/subway.jpg"],
         ["Pokawa", 43.697404, 7.265242, "1 Place Grimaldi, 06000 Nice", "/img/pokawa.jpg"],
-        ["McDonalds", 43.695162, 7.265964, "1 Prom. des Anglais, 06000 Nice", "/img/mcdo.png"],
+        ["McDonalds", 43.695162, 7.265964, "1 Prom. des Anglais, 06000 Nice", "/img/mcdo.jpg"],
         ["So Green", 43.698222, 7.270116, "11 Place Massena, 06000 Nice", "/img/so-green.jpg"],
-        ["Chez René Socca", 43.700214, 7.278889, "2 Rue Miralheti, 06300 Nice", "/img/socca.png"]
+        ["Monop", 43.697836, 7.270398, "15 Place Massena, 06000 Nice", "/img/monop.jpg"]
       ];
       var myLatLng;
       var marker, i;
@@ -141,7 +141,7 @@ export class CurrentLocation extends React.Component {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
             var html = '<b><center>' + locations[i][0] + '</center></b>';
-            html += '<center> <img src="' + locations[i][4] + '" align="center" /><center>'
+            html += '<img src="' + locations[i][4] + '" />'
             html += '<div id="bodyContent">' + locations[i][3];
             infowindow.setContent(html);
             infowindow.open(this.map, marker);
