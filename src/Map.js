@@ -143,7 +143,7 @@ export class CurrentLocation extends React.Component {
           return function() {
             var html = '<b><center>' + locations[i][0] + '</center></b><br>';
             html += '<center> <img src="' + locations[i][4] + '" align="center" /><center><br>'
-            html += '<div id="bodyContent">' + locations[i][3];
+            html += '<I>' + locations[i][3] + '</I>'
             infowindow.setContent(html);
             infowindow.open(this.map, marker);
           }
