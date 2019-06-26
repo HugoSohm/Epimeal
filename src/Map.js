@@ -127,7 +127,8 @@ export class CurrentLocation extends React.Component {
         ["Pokawa", 43.697404, 7.265242, "1 Place Grimaldi, 06000 Nice", "/img/pokawa.jpg"],
         ["McDonalds", 43.695162, 7.265964, "1 Prom. des Anglais, 06000 Nice", "/img/mcdo.png"],
         ["So Green", 43.698222, 7.270116, "11 Place Massena, 06000 Nice", "/img/so-green.jpg"],
-        ["Chez René Socca", 43.700214, 7.278889, "2 Rue Miralheti, 06300 Nice", "/img/socca.png"]
+        ["Chez René Socca", 43.700214, 7.278889, "2 Rue Miralheti, 06300 Nice", "/img/socca.png"],
+        ["Monop", 43.697836, 7.270398, "15 Place Massena, 06000 Nice", "/img/monop.jpg"]
       ];
       var myLatLng;
       var marker, i;
