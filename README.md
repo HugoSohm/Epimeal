@@ -1,5 +1,7 @@
 <div align="center"><h1>Epimeal - Trouvez où manger</h1>
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b12c7421a93f93a375d5/maintainability)](https://codeclimate.com/github/HugoSohm/Epimeal/maintainability)
+
 Epimeal est un projet HUB développé par 3 étudiants à [Epitech Nice](https://www.epitech.eu/fr/)
 
 [Hugo Sohm](https://github.com/HugoSohm), [Nathan Grimaud](https://github.com/GrimaudNathan), [Ryan Chamayrac](https://github.com/RyanChamayrac)
